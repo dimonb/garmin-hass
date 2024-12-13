@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/house-of-abbey/GarminHomeAssistant/main/config.schema.json",
+  "title": "Home",
+  "items": [
+    {
+      "name": "Спальня",
+      "title": "Спальня",
+      "type": "group",
+      "items": [
+        {
+          "entity": "light.pw_switch02_pw_switch02",
+          "name": "Свет",
+          "type": "toggle"
+        },
+        {
+          "entity": "input_boolean.bedroom_cool",
+          "name": "Охлаждение",
+          "type": "toggle"
+        },
+        {
+          "name": "Жалюзи",
+          "title": "Жалюзи",
+          "type": "group",
+          "items": [
+            {
+              "name": "100%",
+              "type": "tap",
+              "tap_action": {
+                  "service": "script.move_blinds_to_position",
+                  "data": {
+                      "position": 100
+                  }
+              }
+            },
+            {
+              "name": "40%",
+              "type": "tap",
+              "tap_action": {
+                  "service": "script.move_blinds_to_position",
+                  "data": {
+                      "position": 40
+                  }
+              }
+            },
+            {
+              "name": "0%",
+              "type": "tap",
+              "tap_action": {
+                  "service": "script.move_blinds_to_position",
+                  "data": {
+                      "position": 0
+                  }
+              }
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "name": "Гостинная",
+      "title": "Гостинная",
+      "type": "group",
+      "items": [
+        {
+          "entity": "light.ceiling_light_living_room",
+          "name": "Свет",
+          "type": "toggle"
+        },
+        {
+          "entity": "light.pw_switch01",
+          "name": "Над столом",
+          "type": "toggle"
+        },
+        {
+          "entity": "input_boolean.leaving_room_cool",
+          "name": "Охлаждение",
+          "type": "toggle"
+        }
+        
+      ]
+    },
+
+  ]
+}
