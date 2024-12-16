@@ -13,7 +13,7 @@
           "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state_attr('climate.bedroom_aircon', 'hvac_action', 'heating') or is_state_attr('climate.bedroom_aircon', 'hvac_action', 'preheating') -%}🔥{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_bedroom', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_bedroom')|float) }}🫁{% endif %}"
         },
         {
-          "entity": "light.pw_switch02_pw_switch02",
+          "entity": "light.pw_switch02",
           "name": "Свет",
           "type": "toggle"
         },
