@@ -90,6 +90,29 @@
           "type": "toggle"
         }
       ]
+    },
+    {
+      "name": "Туалет",
+      "title": "Туалет",
+      "type": "group",
+      "items": [
+        {
+          "entity": "switch.main_boiler",
+          "name": "Бойлер",
+          "type": "toggle"
+        },
+        {
+          "entity": "light.wall_switch03",
+          "name": "Взрослый",
+          "type": "toggle"
+        },
+        {
+          "entity": "light.wall_switch04",
+          "name": "Взрослый",
+          "type": "toggle"
+        }
+      ]
     }
+
   ]
 }
