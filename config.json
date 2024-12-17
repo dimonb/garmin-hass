@@ -75,7 +75,7 @@
           "type": "template",
           "content": "{% if is_state('sensor.sensor_temp05_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp05_temperature')|float) }}°{% if is_state('climate.living_aircon', 'heat') -%}🔥{%- endif %}{% if is_state('climate.living_aircon', 'cool') -%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp05_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp05_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_livingroom_co2', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_livingroom_co2')|float) }}🫁{% endif %}",
           "tap_action": {
-            "service": "script.living_aircon"
+            "service": "script.livingroom_climate"
           }
 
         },
