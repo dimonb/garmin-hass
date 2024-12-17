@@ -108,7 +108,7 @@
         },
         {
           "entity": "light.wall_switch04",
-          "name": "Взрослый",
+          "name": "Детский",
           "type": "toggle"
         }
       ]
