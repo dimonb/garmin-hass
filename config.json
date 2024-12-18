@@ -5,6 +5,7 @@
     {
       "name": "Bedroom",
       "title": "Bedroom",
+      "content": "Test",
       "type": "group",
       "items": [
         {
