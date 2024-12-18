@@ -88,6 +88,11 @@
           "entity": "light.pw_switch01",
           "name": "Над столом",
           "type": "toggle"
+        },
+        {
+          "entity": "light.kitchen",
+          "name": "Кухня",
+          "type": "toggle"
         }
       ]
     },
