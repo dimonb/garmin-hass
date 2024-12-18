@@ -5,7 +5,7 @@
     {
       "name": "Bedroom",
       "title": "Bedroom",
-      "content": "Test",
+      "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state('climate.bedroom_aircon', 'heat')-%}🔥{%- endif %}{% if is_state('climate.bedroom_aircon', 'cool')-%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_bedroom', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_bedroom')|float) }}🫁{% endif %}",
       "type": "group",
       "items": [
         {
@@ -69,6 +69,7 @@
     {
       "name": "Livingroom",
       "title": "Livingroom",
+      "content": "{% if is_state('sensor.sensor_temp05_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp05_temperature')|float) }}°{% if is_state('climate.living_aircon', 'heat') -%}🔥{%- endif %}{% if is_state('climate.living_aircon', 'cool') -%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp05_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp05_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_livingroom_co2', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_livingroom_co2')|float) }}🫁{% endif %}",
       "type": "group",
       "items": [
         {
