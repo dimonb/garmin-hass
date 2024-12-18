@@ -3,12 +3,12 @@
   "title": "Home",
   "items": [
     {
-      "name": "Спальня",
-      "title": "Спальня",
+      "name": "Bedroom",
+      "title": "Bedroom",
       "type": "group",
       "items": [
         {
-          "name": "Климат",
+          "name": "Climate",
           "type": "template",
           "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state('climate.bedroom_aircon', 'heat')-%}🔥{%- endif %}{% if is_state('climate.bedroom_aircon', 'cool')-%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_bedroom', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_bedroom')|float) }}🫁{% endif %}",
           "tap_action": {
@@ -17,17 +17,17 @@
         },
         {
           "entity": "light.pw_switch02",
-          "name": "Свет",
+          "name": "Light",
           "type": "toggle"
         },
         {
           "entity": "switch.krovat",
-          "name": "Кровать",
+          "name": "Bed",
           "type": "toggle"
         },
         {
-          "name": "Жалюзи",
-          "title": "Жалюзи",
+          "name": "Cover",
+          "title": "Cover",
           "type": "group",
           "items": [
             {
@@ -66,12 +66,12 @@
       ]
     },
     {
-      "name": "Гостиная",
-      "title": "Гостиная",
+      "name": "Livingroom",
+      "title": "Livingroom",
       "type": "group",
       "items": [
         {
-          "name": "Климат",
+          "name": "Climate",
           "type": "template",
           "content": "{% if is_state('sensor.sensor_temp05_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp05_temperature')|float) }}°{% if is_state('climate.living_aircon', 'heat') -%}🔥{%- endif %}{% if is_state('climate.living_aircon', 'cool') -%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp05_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp05_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_livingroom_co2', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_livingroom_co2')|float) }}🫁{% endif %}",
           "tap_action": {
@@ -81,39 +81,39 @@
         },
         {
           "entity": "light.smart_ceiling_light",
-          "name": "Свет",
+          "name": "Light",
           "type": "toggle"
         },
         {
           "entity": "light.pw_switch01",
-          "name": "Над столом",
+          "name": "Table",
           "type": "toggle"
         },
         {
           "entity": "light.kitchen",
-          "name": "Кухня",
+          "name": "Kitchen",
           "type": "toggle"
         }
       ]
     },
     {
-      "name": "Туалет",
-      "title": "Туалет",
+      "name": "WC",
+      "title": "WC",
       "type": "group",
       "items": [
         {
           "entity": "switch.main_boiler",
-          "name": "Бойлер",
+          "name": "Boiler",
           "type": "toggle"
         },
         {
           "entity": "light.wall_switch03",
-          "name": "Взрослый",
+          "name": "Main",
           "type": "toggle"
         },
         {
           "entity": "light.wall_switch04",
-          "name": "Детский",
+          "name": "Kids",
           "type": "toggle"
         }
       ]
