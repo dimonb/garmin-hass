@@ -95,6 +95,11 @@
           "entity": "light.kitchen",
           "name": "Kitchen",
           "type": "toggle"
+        },
+        {
+          "entity": "light.pw_switch04",
+          "name": "Balcony",
+          "type": "toggle"
         }
       ]
     },
