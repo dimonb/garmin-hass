@@ -5,13 +5,13 @@
     {
       "name": "Bedroom",
       "title": "Bedroom",
-      "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state('climate.bedroom_aircon', 'heat')-%}🔥{%- endif %}{% if is_state('climate.bedroom_aircon', 'cool')-%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_bedroom', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_bedroom')|float) }}🫁{% endif %}",
+      "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state('climate.bedroom_aircon', 'heat')-%}🔥{%- endif %}{% if is_state('climate.bedroom_aircon', 'cool')-%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.wifi_smart_switch_carbon_dioxide', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.wifi_smart_switch_carbon_dioxide')|float) }}🫁{% endif %}",
       "type": "group",
       "items": [
         {
           "name": "Climate",
           "type": "template",
-          "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state('climate.bedroom_aircon', 'heat')-%}🔥{%- endif %}{% if is_state('climate.bedroom_aircon', 'cool')-%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.co2_bedroom', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.co2_bedroom')|float) }}🫁{% endif %}",
+          "content": "{% if is_state('sensor.sensor_temp02_temperature', 'unavailable') %}-{% else %}{{ '%.1f'|format(states('sensor.sensor_temp02_temperature')|float) }}°{% if is_state('climate.bedroom_aircon', 'heat')-%}🔥{%- endif %}{% if is_state('climate.bedroom_aircon', 'cool')-%}❄️{%- endif %}{% endif %}{% if is_state('sensor.sensor_temp02_humidity', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.sensor_temp02_humidity')|float) }}%{% endif %}{% if is_state('sensor.wifi_smart_switch_carbon_dioxide', 'unavailable') %}-{% else %}{{ '%.0f'|format(states('sensor.wifi_smart_switch_carbon_dioxide')|float) }}🫁{% endif %}",
           "tap_action": {
             "service": "script.bedroom_climate"
           }
